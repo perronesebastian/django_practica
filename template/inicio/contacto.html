@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{%block titulo%} Pagina de contacto {%endblock%}
+
+{%block contenido%}
+    
+    <h1>CONTACTOS:</h1>
+
+    <p>Nombre: Sebastian</p>
+
+    <p>Apellido: Perrone</p>
+
+    <p>Telefono: 3624126149</p>
+
+    <p>{{nombre}}</p>
+
+    <p>{{lista_numeros}}</p>
+
+    {%for x in lista_numeros%}
+        {%if x < 1500 %}
+            <p>HOLA{{x}}</p>
+        {%endif%}
+    {%endfor%}
+
+    {%if edad > 17 %}
+        <p>Es mayor de edad</p>
+    {%else%}
+        <p>Es menor de edad</p>
+    {%endif%}
+
+{%endblock%}
