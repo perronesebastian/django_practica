@@ -14,3 +14,4 @@ class Empleado(models.Model):
     fecha_nacimiento = models.DateTimeField()
     sueldo = models.DecimalField(max_digits = 10, decimal_places=2, default=10000)
     departamento = models.ForeignKey(Departamento, on_delete=SET_NULL, null=True)
+    dni = models.CharField(max_length=8, unique=True)
